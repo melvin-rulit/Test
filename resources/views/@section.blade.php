@@ -1,16 +1,9 @@
-@section('section')
+<div v-if="errors" v-for="category in errors">
+                <div v-for="error in category">
+                  <span>{{ error }}</span>
+                </div>
+</div>
 
-<div id="app">
-    {{ message }}
-  </div>
-
-    <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        message: 'Hello Vue!'
-      }
-    })
-  </script>
-
-  @endsection
+<div v-for="item in items">
+  {{ item.text }}
+</div>
