@@ -35,6 +35,14 @@ class RegisterController extends Controller {
                 ['password'=> bcrypt($request->password)],
             ));
 
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Вы успешно зарегистрировались. Используйте свой адрес электронной почты и пароль для входа в систему.'
+            ]);
+
+
+
         // return response()->json([
         //             'message' => 'Вы успешно зарегистрировались. Используйте свой адрес электронной почты и пароль для входа в систему.'
         //         ], 200);

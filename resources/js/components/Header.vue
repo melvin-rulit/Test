@@ -1,0 +1,73 @@
+<template>
+
+    <div class="top">
+        <ul class="topnav">
+            <li v-for="link of links" :key="link.title">
+               <router-link class="lot"  :to="link.href">{{ link.title }}</router-link>
+            </li>
+        </ul>
+    </div>
+
+</template>
+
+
+<script>
+    export default {
+        data() {
+            return {
+                links: [{
+                        title: "Home",
+                        href: "/"
+                    },
+                    {
+                        title: "Login",
+                        href: "/login"
+                    },
+                    {
+                        title: "Register",
+                        href: "/register"
+                    },
+                    {
+                        title: "Logout",
+                        href: "/logout"
+                    }
+                ]
+            }
+        },
+        mounted() {
+            console.log('Компонент  Home.vue загружен')
+        },
+    }
+
+</script>
+
+<style scoped>
+/* Add a black background color to the top navigation */
+.top {
+    background-color: #333;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav li{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav li:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav li.active {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>

@@ -15,6 +15,7 @@
         "laravel/framework": "^8.0",
         "laravel/passport": "^10.0",
         "laravel/tinker": "^2.0",
+        "laravel/ui": "^3.1",
         "mobiledetect/mobiledetectlib": "^2.8"
     },
     "require-dev": {
