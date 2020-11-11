@@ -50,16 +50,21 @@
     background-color: #333;
     overflow: hidden;
     margin-bottom: 10px;
+   
 }
-
+.top ul {
+  margin-left: 30%;
+   
+}
+ 
 
 /* Style the links inside the navigation bar */
 .topnav li {
     float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    
+    /* text-align: center; */
+    padding: 16px 18px;
+  
     font-size: 17px;
     list-style:none;
 }
@@ -75,11 +80,11 @@
     color: black;
 }
 
-/* Add a color to the active/current link */
+/* Add a color to the active/current link
 .topnav li.active {
     background-color: #4CAF50;
     color: white;
-}
+} */
 
 
 </style>

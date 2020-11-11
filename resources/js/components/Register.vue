@@ -31,7 +31,7 @@
         </div>
         <div class="m-top">
 
-            <button @click="onRegister">Register</button>
+            <button class="button4" @click="onRegister">Register</button>
 
         </div>
         <v-layout row>
@@ -88,7 +88,8 @@
 }
 
 .m-op{
-text-align: center;
+/* text-align: center; */
 margin-top: 10%;
+margin-left: 15%;
 }
 </style>
