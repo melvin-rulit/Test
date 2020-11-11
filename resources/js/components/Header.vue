@@ -3,12 +3,14 @@
     <div class="top">
         <ul class="topnav">
             <li v-for="link of links" :key="link.title">
-               <router-link class="lot"  :to="link.href">{{ link.title }}</router-link>
+                <router-link class="lot" :to="link.href">{{ link.title }}</router-link>
             </li>
-            <li class="nav-item" v-show="user">
-              <a class="nav-link" href="#" @click="logout">Logout</a>
-            </li>
+            
         </ul>
+
+        <button type="button" @onLogout="Logout" class="btn btn-primary">
+            Logout
+        </button>
     </div>
 
 </template>
@@ -31,60 +33,76 @@
                         href: "/register"
                     },
                     {
-                        title: "Logout",
+                        title: "logout",
                         href: "/logout"
                     }
                 ]
             }
         },
-        mounted() {
-            console.log('Компонент  Home.vue загружен')
-        },
+
+        methods: {
+            onClick(onLogout) {
+                this.errors = {};
+                // if (item.path !== "/logout") {
+                //     this.$router.push(item.path);
+
+                //     return true;
+                // }
+
+                axios.post("/api/logout").then(response => {
+                    if (response.data.success) {
+                        Auth.logout();
+                        this.$router.push("/");
+                    }
+                });
+            }
+        }
     }
 
 </script>
 
 <style scoped>
-/* Add a black background color to the top navigation */
-.top {
-    background-color: #333;
-    overflow: hidden;
-    margin-bottom: 10px;
-   
-}
-.top ul {
-  margin-left: 30%;
-   
-}
- 
+    /* Add a black background color to the top navigation */
+    .top {
+        background-color: #333;
+        overflow: hidden;
+        margin-bottom: 10px;
 
-/* Style the links inside the navigation bar */
-.topnav li {
-    float: left;
-    
-    /* text-align: center; */
-    padding: 16px 18px;
-  
-    font-size: 17px;
-    list-style:none;
-}
-.topnav a {
- 
-    text-decoration: none;
-  
-}
+    }
 
-/* Change the color of links on hover */
-.topnav li:hover {
-    background-color: #ddd;
-    color: black;
-}
+    .top ul {
+        margin-left: 30%;
 
-/* Add a color to the active/current link
+    }
+
+
+    /* Style the links inside the navigation bar */
+    .topnav li {
+        float: left;
+
+        /* text-align: center; */
+        padding: 16px 18px;
+
+        font-size: 17px;
+        list-style: none;
+    }
+
+    .topnav a {
+
+        text-decoration: none;
+
+    }
+
+    /* Change the color of links on hover */
+    .topnav li:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    /* Add a color to the active/current link
 .topnav li.active {
     background-color: #4CAF50;
     color: white;
 } */
-
 
 </style>
