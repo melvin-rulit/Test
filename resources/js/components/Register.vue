@@ -1,6 +1,6 @@
 <template>
     <div>
-
+<p2>Register Page</p2>
         <div v-if="errors">
             <div v-for="category in errors" :key="category.errors">
                 <div class="m-alert m-alert--outline alert alert-danger alert-dismissible" role="alert"
@@ -10,24 +10,24 @@
             </div>
         </div>
 
-        <div>
-            <p>name</p> <input label="Name" v-model="form.name" :error-messages="checkError('name')">
+        <div class="m-top">
+             <input placeholder="Enter name" label="Name" v-model="form.name" :error-messages="checkError('name')">
 
         </div>
-        <div>
-            <p>email</p> <input label="email" v-model="form.email" :error-messages="checkError('email')">
+        <div class="m-top">
+            <input placeholder="Enter email" label="email" v-model="form.email" :error-messages="checkError('email')">
 
         </div>
-        <div>
-            <p>password</p> <input label="password" v-model="form.password" :error-messages="checkError('password')">
+        <div class="m-top">
+             <input placeholder="Enter password" label="password" v-model="form.password" :error-messages="checkError('password')">
 
         </div>
-        <div>
-            <p>confirmation password</p> <input label="password_confirmation" v-model="form.password_confirmation"
+        <div class="m-top">
+           <input placeholder="Confirmation password" label="password_confirmation" v-model="form.password_confirmation"
                 :error-messages="checkError('password_confirmation')">
 
         </div>
-        <div>
+        <div class="m-top">
 
             <button @click="onRegister">Register</button>
 
@@ -78,3 +78,15 @@
     };
 
 </script>
+
+<style>
+.m-top{
+    margin-top: 10px;
+};
+
+.blocktext input{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+</style>

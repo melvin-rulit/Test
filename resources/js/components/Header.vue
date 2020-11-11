@@ -5,6 +5,9 @@
             <li v-for="link of links" :key="link.title">
                <router-link class="lot"  :to="link.href">{{ link.title }}</router-link>
             </li>
+            <li class="nav-item" v-show="user">
+              <a class="nav-link" href="#" @click="logout">Logout</a>
+            </li>
         </ul>
     </div>
 
