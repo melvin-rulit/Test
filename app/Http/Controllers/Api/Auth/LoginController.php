@@ -25,11 +25,13 @@ class LoginController extends Controller {
 
             //  //Перенаправляет пользователя на главную страницу  --  после авторизации
             // return Redirect::route('home');
-
-            return response()->json([
-                'success' => true,
-              'user' => auth()->user()
-            ]);
+            $response = ['token' => $token,
+                        'success' => true];
+            return response($response, 200);
+            // return response()->json([
+            //     'success' => true,
+            //   'user' => auth()->user()
+            // ]);
             
         }else {
 
@@ -46,10 +48,3 @@ class LoginController extends Controller {
     }
 
 }
-
-
-
-//todoo наброски 
-            // return response()->json(['token' => $token], 200);
-            ////return request()->all();
-            //// return Response::json($token);

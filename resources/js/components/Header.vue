@@ -11,6 +11,10 @@
         <button type="button" @onLogout="Logout" class="btn btn-primary">
             Logout
         </button>
+
+        <!-- <li>
+						<a href="" @click.prevent="logout">Logout</a>
+					</li> -->
     </div>
 
 </template>
@@ -38,25 +42,34 @@
                     }
                 ]
             }
-        },
+         },
+         methods:{
+			logout(){
+				axios.post('/logout').then(response => {
+					location.reload();
+				}).catch(error => {
+					location.reload();
+				});
+			}
+		}
 
-        methods: {
-            onClick(onLogout) {
-                this.errors = {};
-                // if (item.path !== "/logout") {
-                //     this.$router.push(item.path);
+        // methods: {
+        //     onClick(onLogout) {
+        //         this.errors = {};
+        //         // if (item.path !== "/logout") {
+        //         //     this.$router.push(item.path);
 
-                //     return true;
-                // }
+        //         //     return true;
+        //         // }
 
-                axios.post("/api/logout").then(response => {
-                    if (response.data.success) {
-                        Auth.logout();
-                        this.$router.push("/");
-                    }
-                });
-            }
-        }
+        //         axios.post("/api/logout/submit").then(response => {
+        //             if (response.data.success) {
+        //                 // Auth.logout();
+        //                 this.$router.push("/");
+        //             }
+        //         });
+        //     }
+        // }
     }
 
 </script>

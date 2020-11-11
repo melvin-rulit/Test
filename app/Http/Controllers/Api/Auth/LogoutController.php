@@ -5,26 +5,35 @@ namespace App\Http\Controllers\Api\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Fasades\Auth;
-use Mobile_Detect;
 
 class LogoutController extends Controller
 {
     public function logout(Request $request)
     {
-
-
-
-        $user = Auth::guard('api')->user();
-    
-        if ($user) {
-            $user->api_token = null;
-            $user->save();
-        }
-    
-        return response()->json([
-            'success' => true,
-       
+        Auth::logout();
+        return response()
+        ->json([
+            'logout' => true
         ]);
-        // return response()->json(['data' => 'User logged out.'], 200);
+
+    //     $token = $request->user()->token();
+    // $token->revoke();
+    // $response = ['message' => 'You have been successfully logged out!'];
+    // return response($response, 200);
+
+    //     // Auth::logout();
+
+    //     // // $user = Auth::guard('api')->user();
+    
+    //     // // if ($user) {
+    //     // //     $user->api_token = null;
+    //     // //     $user->save();
+    //     // // }
+    
+    //     // return response()->json([
+    //     //     'success' => true,
+       
+    //     // ]);
+        
 }
 }

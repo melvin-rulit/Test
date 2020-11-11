@@ -37,7 +37,8 @@ Route::group(['namespace' => 'Api'], function () {
         Route::get('login', 'LoginController@loginWiews')->name('login');
         Route::post('login/submit', 'LoginController@submit')->name('loginSubmit');
         // Route::post('logout', function (){Auth::logout(); return redirect('/');})->name('logout');
-        Route::post('logout', 'LogoutController@logout')->middleware('auth:api')->name('logout');
+        // Route::post('logout', 'LogoutController@logout')->middleware('auth:api')->name('logout');
+        Route::post('logout/submit', 'LogoutController@logout')->name('logout');
 
     });
     });
