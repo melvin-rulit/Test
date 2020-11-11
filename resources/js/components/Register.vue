@@ -1,5 +1,5 @@
 <template>
-    <div>
+   <div class="m-op">
 <h2>Register Page</h2>
 
 <!-- Блок выводит ошибки -->
@@ -82,13 +82,13 @@
 </script>
 
 <style>
+
 .m-top{
-    margin-top: 10px;
-};
+    margin-top: 20px;
+}
 
-.blocktext input{
-    margin-left: auto;
-    margin-right: auto;
-
+.m-op{
+text-align: center;
+margin-top: 10%;
 }
 </style>

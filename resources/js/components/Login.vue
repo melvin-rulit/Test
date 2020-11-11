@@ -1,5 +1,7 @@
 <template>
-    <div class="blocktext">
+    <div>
+
+<div class="m-op">
         <h2>Login Page</h2>
 
         <!-- Блок выводит ошибки -->
@@ -28,6 +30,9 @@
             <button @click="onLogin">Login</button>
 
         </div>
+
+    </div>
+
 
     </div>
 </template>
@@ -75,18 +80,3 @@
     };
 
 </script>
-
-<style>
-    .m-top {
-        margin-top: 10px;
-    }
-
-    ;
-
-    .blocktext  {
-        margin-top: 200px;
-       
-
-    }
-
-</style>

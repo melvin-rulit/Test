@@ -52,14 +52,21 @@
     margin-bottom: 10px;
 }
 
+
 /* Style the links inside the navigation bar */
-.topnav li{
+.topnav li {
     float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    list-style:none;
+}
+.topnav a {
+ 
+    text-decoration: none;
+  
 }
 
 /* Change the color of links on hover */
@@ -73,4 +80,6 @@
     background-color: #4CAF50;
     color: white;
 }
+
+
 </style>
