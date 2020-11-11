@@ -34,9 +34,14 @@ class RegisterFormRequest extends FormRequest
     public function messages(){
 
         return [
-            'password.min' => 'Ух ты какой коротенький парольчик. Нужен не меньше 6',
+            'password.min' => 'Ух ты, какой коротенький парольчик. Нужен не меньше 6 цифр',
+            'password.required' => 'Поле password обязательное',
+            'password.confirmed' => 'Пароли не совпадают',
             'name.max' => 'Имя не может бьть длинее 10 символов',
+            'name.required' => 'Поле name обязательное',
             'email.unique' => 'Этот E-mail уже кем-то занят',
+            'email.email' => 'Проверьте введеный E-mail ',
+            'email.required' => 'Поле email обязательное',
         ];
     }
 }

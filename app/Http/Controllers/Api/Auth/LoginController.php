@@ -18,14 +18,19 @@ class LoginController extends Controller {
         if(auth()->attempt($credentials)) {
 
             $token=auth()->user()->createToken('MelvinRulit')->accessToken;
-            $url = Request::url();
-            dump($url);
+            // $url = Request::url();
+            
             // // Выводит сообщение об удачной регистрации в resources/wiews/include/hero.blade.php
             // \Session::flash('login.message', 'Теперь для вас открыты все возможности сайта');
 
-            // //Перенаправляет пользователя на главную страницу  --  после авторизации
+            //  //Перенаправляет пользователя на главную страницу  --  после авторизации
             // return Redirect::route('home');
-        
+
+            return response()->json([
+                'success' => true,
+              'user' => auth()->user()
+            ]);
+            
         }else {
 
             //перенаправит пользователя в предыдущее место, когда в отправленной форме обнаружены ошибки.

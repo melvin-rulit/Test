@@ -2,28 +2,28 @@
     <div>
 
         <div v-if="errors">
-            <div  v-for="category in errors" :key="category.errors">
-            <div class="m-alert m-alert--outline alert alert-danger alert-dismissible" role="alert"
-                v-for="error in category" :key="error.category">
-                <span>{{ error }}</span>
+            <div v-for="category in errors" :key="category.errors">
+                <div class="m-alert m-alert--outline alert alert-danger alert-dismissible" role="alert"
+                    v-for="error in category" :key="error.category">
+                    <span>{{ error }}</span>
+                </div>
             </div>
         </div>
-</div>
 
         <div>
-            <input label="Name" v-model="form.name" :error-messages="checkError('name')">
-
-        </div>
-        <div>
-            <input label="email" v-model="form.email" :error-messages="checkError('email')">
+            <p>name</p> <input label="Name" v-model="form.name" :error-messages="checkError('name')">
 
         </div>
         <div>
-            <input label="password" v-model="form.password" :error-messages="checkError('password')">
+            <p>email</p> <input label="email" v-model="form.email" :error-messages="checkError('email')">
 
         </div>
         <div>
-            <input label="password_confirmation" v-model="form.password_confirmation"
+            <p>password</p> <input label="password" v-model="form.password" :error-messages="checkError('password')">
+
+        </div>
+        <div>
+            <p>confirmation password</p> <input label="password_confirmation" v-model="form.password_confirmation"
                 :error-messages="checkError('password_confirmation')">
 
         </div>
@@ -32,7 +32,9 @@
             <button @click="onRegister">Register</button>
 
         </div>
-
+        <v-layout row>
+            <v-text-field label="Confirm Password" v-model="form.password_confirmation" type="password"></v-text-field>
+        </v-layout>
 
     </div>
 
