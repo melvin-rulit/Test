@@ -83,9 +83,9 @@
 
     ;
 
-    .blocktext input {
-        margin-left: auto;
-        margin-right: auto;
+    .blocktext  {
+        margin-top: 200px;
+       
 
     }
 
