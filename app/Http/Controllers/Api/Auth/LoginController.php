@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Fasades\Auth;
 use Illuminate\Validation\Validator;
-// //use Response;
+use App\Http\Requests\LoginFormRequest;
 
 class LoginController extends Controller {
 
-    public function submit(Request $request) {
+    public function submit(LoginFormRequest $request) {
 
         $credentials=[ "email"=>$request->email,
         "password"=>$request->password,];
@@ -18,7 +18,7 @@ class LoginController extends Controller {
         if(auth()->attempt($credentials)) {
 
             $token=auth()->user()->createToken('MelvinRulit')->accessToken;
-            // $url = Request::url();
+            
             
             // // Выводит сообщение об удачной регистрации в resources/wiews/include/hero.blade.php
             // \Session::flash('login.message', 'Теперь для вас открыты все возможности сайта');

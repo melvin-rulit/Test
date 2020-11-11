@@ -1,6 +1,8 @@
 <template>
     <div>
-<p2>Register Page</p2>
+<h2>Register Page</h2>
+
+<!-- Блок выводит ошибки -->
         <div v-if="errors">
             <div v-for="category in errors" :key="category.errors">
                 <div class="m-alert m-alert--outline alert alert-danger alert-dismissible" role="alert"
@@ -9,7 +11,7 @@
                 </div>
             </div>
         </div>
-
+<!-- END -->
         <div class="m-top">
              <input placeholder="Enter name" label="Name" v-model="form.name" :error-messages="checkError('name')">
 
