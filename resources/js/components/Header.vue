@@ -59,7 +59,7 @@
 </script>
 
 <style scoped>
-    /* Add a black background color to the top navigation */
+    /* Header*/
     .top {
         background-color: #333;
         overflow: hidden;

@@ -39,32 +39,6 @@ class RegisterController extends Controller {
                 'message' => 'Вы успешно зарегистрировались. Используйте свой адрес электронной почты и пароль для входа в систему.'
             ]);
 
-
-
-        // return response()->json([
-        //             'message' => 'Вы успешно зарегистрировались. Используйте свой адрес электронной почты и пароль для входа в систему.'
-        //         ], 200);
-
-        // Выводит сообщение об удачной регистрации в resources/wiews/include/hero.blade.php
-        \Session::flash('flash.message', 'Благодарим за регистрацию. Теперь вы можете авторизоваться');
-
-        //Перенаправляет пользователя на страницу авторизации --  после регистрации
-        return Redirect::route('home');
     }
 
-    //Возвращение шаблона --> регистрации пользователя --
-    public function registerWiews() {
-        return view('auth.register');
     }
-
-
-    /*
-/////////////////////////////////////////////////////////
-  * Если нужно сделать валидацию поля по шаблону в App\Rules\IsValidStateInUSA;
-  * В форме должно быть поле state
-
-  $request->validate([
-       'state' => ['required', new IsValidStateInUSA],
-    ]);
-*/
-}
