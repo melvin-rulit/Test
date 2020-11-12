@@ -4,14 +4,11 @@
         <div class="m-op">
             <h2>Login Page</h2>
 
-            <!-- вывод сообшений c LoginController-->
-           <!-- <div v-if="alert" v-text="alert"></div>  -->
-
             <!-- Блок выводит ошибки -->
             <div class="position " v-if="errors">
                 <div v-for="category in errors" :key="category.errors">
                     <div v-for="error in category" :key="error.category">
-                        <span>{{ error }}</span>
+                        <span>{{ error.category }}</span>
                     </div>
                 </div>
             </div>
@@ -40,7 +37,7 @@
     </div>
 </template>
 <script>
-    // import Auth from "../helpers/Auth";
+    import Auth from "../helpers/Auth";
     export default {
         data() {
             return {
@@ -49,7 +46,9 @@
                     password: null
                 },
 
-                errors: {}
+                errors: {},
+
+
             };
         },
 
@@ -64,20 +63,16 @@
 
 
                         if (response.data.success) {
-                            // // вывод сообщений
-                            // response.data.message
-
-                            // this.alert = response.data.message
-
-                            this.$router.push("/");
-                            Auth.login(response.data.user);
-
+         
+                          this.$router.push("/");
+                          Auth.login(response.data.user);
                         }
                     })
                     .catch(error => {
                         this.errors = error.response.data.errors;
                     });
             },
+
 
             checkError(field) {
                 return this.errors.hasOwnProperty(field) ? this.errors[field] : [];
@@ -144,8 +139,8 @@
 
 
     /* блок ошибок */
-span{
- color: red;
-}
+    span {
+        color: red;
+    }
 
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="m-op">
 
-        <h2>Register Page</h2>
+        <h2>Register Page </h2>
 
                 <!-- Блок выводит ошибки -->
         <div class="position" v-if="errors">
@@ -65,7 +65,8 @@
                     .post("/api/register/submit", this.form)
                     .then(response => {
                         if (response.data.success) {
-                            this.$router.push("/")
+                            this.$router.push("/login")
+                          
                         }
                     })
                     .catch(error => {
