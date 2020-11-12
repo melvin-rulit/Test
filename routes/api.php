@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+    // return $request->user();
+    // Route::get('logout', 'LogoutController@loGout')->name('logout');
 });
 
 // Группа в которой прописанны Ссылки для blog/resources/views/include/header.blade.php
@@ -35,10 +36,10 @@ Route::group(['namespace' => 'Api'], function () {
         Route::get('register', 'RegisterController@registerWiews')->name('register');
         Route::post('register/submit', 'RegisterController@store')->name('registerSubmit');
         Route::get('login', 'LoginController@loginWiews')->name('login');
-        Route::post('login/submit', 'LoginController@submit')->name('loginSubmit');
+        Route::post('login/submit', 'LoginController@suBmit')->name('loginSubmit');
         // Route::post('logout', function (){Auth::logout(); return redirect('/');})->name('logout');
         // Route::post('logout', 'LogoutController@logout')->middleware('auth:api')->name('logout');
-        Route::post('logout/submit', 'LogoutController@logout')->name('logout');
+        Route::post('logout', 'LogoutController@loGout')->name('logout');
 
     });
     });

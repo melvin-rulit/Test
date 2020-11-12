@@ -1,19 +1,20 @@
 <template>
-   <div class="m-op">
-<h2>Register Page</h2>
+    <div class="m-op">
 
-<!-- Блок выводит ошибки -->
-        <div v-if="errors">
+        <h2>Register Page</h2>
+
+                <!-- Блок выводит ошибки -->
+        <div class="position" v-if="errors">
             <div v-for="category in errors" :key="category.errors">
-                <div class="m-alert m-alert--outline alert alert-danger alert-dismissible" role="alert"
-                    v-for="error in category" :key="error.category">
+                <div v-for="error in category" :key="error.category">
                     <span>{{ error }}</span>
                 </div>
             </div>
         </div>
-<!-- END -->
+        <!-- END -->
+
         <div class="m-top">
-             <input placeholder="Enter name" label="Name" v-model="form.name" :error-messages="checkError('name')">
+            <input placeholder="Enter name" label="Name" v-model="form.name" :error-messages="checkError('name')">
 
         </div>
         <div class="m-top">
@@ -21,12 +22,13 @@
 
         </div>
         <div class="m-top">
-             <input placeholder="Enter password" label="password" v-model="form.password" :error-messages="checkError('password')">
+            <input placeholder="Enter password" label="password" v-model="form.password"
+                :error-messages="checkError('password')">
 
         </div>
         <div class="m-top">
-           <input placeholder="Confirmation password" label="password_confirmation" v-model="form.password_confirmation"
-                :error-messages="checkError('password_confirmation')">
+            <input placeholder="Confirmation password" label="password_confirmation"
+                v-model="form.password_confirmation" :error-messages="checkError('password_confirmation')">
 
         </div>
         <div class="m-top">
@@ -34,9 +36,7 @@
             <button class="button4" @click="onRegister">Register</button>
 
         </div>
-        <v-layout row>
-            <v-text-field label="Confirm Password" v-model="form.password_confirmation" type="password"></v-text-field>
-        </v-layout>
+
 
     </div>
 
@@ -82,14 +82,16 @@
 </script>
 
 <style>
+    .m-top {
+        margin-top: 20px;
+      
+    }
 
-.m-top{
-    margin-top: 20px;
-}
+    .m-op {
+        /* text-align: center; */
+        margin-top: 10%;
+        margin-left: 15%;
+          width: 300px;
+    }
 
-.m-op{
-/* text-align: center; */
-margin-top: 10%;
-margin-left: 15%;
-}
 </style>

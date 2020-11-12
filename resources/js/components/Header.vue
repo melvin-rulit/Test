@@ -8,13 +8,11 @@
             
         </ul>
 
-        <button type="button" @onLogout="Logout" class="btn btn-primary">
+        <button type="button" @click="loGout" class="btn btn-primary">
             Logout
         </button>
 
-        <!-- <li>
-						<a href="" @click.prevent="logout">Logout</a>
-					</li> -->
+
     </div>
 
 </template>
@@ -22,6 +20,8 @@
 
 <script>
     export default {
+      
+
         data() {
             return {
                 links: [{
@@ -37,39 +37,23 @@
                         href: "/register"
                     },
                     {
-                        title: "logout",
-                        href: "/logout"
+                        title: "App",
+                        href: "/App"
                     }
                 ]
             }
          },
-         methods:{
-			logout(){
-				axios.post('/logout').then(response => {
-					location.reload();
-				}).catch(error => {
-					location.reload();
-				});
-			}
-		}
+          methods: {
+            loGout() {
 
-        // methods: {
-        //     onClick(onLogout) {
-        //         this.errors = {};
-        //         // if (item.path !== "/logout") {
-        //         //     this.$router.push(item.path);
-
-        //         //     return true;
-        //         // }
-
-        //         axios.post("/api/logout/submit").then(response => {
-        //             if (response.data.success) {
-        //                 // Auth.logout();
-        //                 this.$router.push("/");
-        //             }
-        //         });
-        //     }
-        // }
+                axios.get("/api/logout/submit").then(response => {
+                    if (response.data.success) {
+                        // Auth.logout();
+                        this.$router.push("/");
+                    }
+                });
+            }
+        }
     }
 
 </script>

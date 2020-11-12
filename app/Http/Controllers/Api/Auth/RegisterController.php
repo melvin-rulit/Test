@@ -4,8 +4,6 @@ use App\Http\Requests\RegisterFormRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
-use Redirect;
-// //use App\Rules\IsValidStateInUSA;
 
 
 
