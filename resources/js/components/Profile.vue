@@ -2,10 +2,10 @@
   <div v-if="authenticated && user">
     <p>Hello, {{ user.name }}</p>
 
-    <!-- <router-link to="/logout">Logout</router-link> -->
+    <router-link to="/logout">Logout</router-link>
 </div>
 
-<!-- <router-link to="/login" v-else>Login</router-link> -->
+<router-link to="/login" v-else>Login</router-link>
 </template>
 
 <script>

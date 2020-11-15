@@ -27,13 +27,11 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'Api'], function () {
     Route::group(['namespace' => 'Auth'], function () {
 
-        // Route::get('register', 'RegisterController@registerWiews')->name('register');
-        Route::post('register/submit', 'RegisterController@store');
-        Route::get('login', 'LoginController@loginWiews')->name('home');
+        Route::post('register/submit', 'RegisterController@suBmit');
         Route::post('login/submit', 'LoginController@suBmit');
         // Route::post('logout', function (){Auth::logout(); return redirect('/');})->name('logout');
    
-        Route::get('/logout', 'meController');
+        Route::get('/logout/submit', 'LogoutController@suBmit');
    
   
     });

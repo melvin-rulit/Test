@@ -7,29 +7,37 @@ class Auth {
     constructor() {
         this.token = window.localStorage.getItem('token');
 
-    let userData = window.localStorage.getItem('user');
-    this.user = userData ? JSON.parse(userData) : null;
+        let userData = window.localStorage.getItem('user');
+        this.user = userData ? JSON.parse(userData) : null;
 
-    if (this.token) {
-        axios.defaults.headers.common['Authorization'] = 'Bearer ' + this.token;
+        if (this.token) {
+            axios.defaults.headers.common['Authorization'] = 'Bearer ' + this.token;
+        }
     }
-}
 
-    login (token, user) {        
+    login(token, user) {
         window.localStorage.setItem('token', token);
         window.localStorage.setItem('user', JSON.stringify(user));
 
         axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
 
         this.token = token;
-    this.user = user;
+        this.user = user;
 
-    Event.$emit('userLoggedIn');
+        window.
+
+        Event.$emit('userLoggedIn');
 
     }
 
-    check () {
-        return !! this.token;
+    logout() {
+        window.localStorage.removeItem("user");
+        window.localStorage.removeItem("token");
+       
+    }
+
+    check() {
+        return !!this.token;
     }
 }
 

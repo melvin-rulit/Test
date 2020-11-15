@@ -22,7 +22,7 @@ class RegisterController extends Controller {
 
 
 
-    public function store(RegisterFormRequest $request) {
+    public function suBmit(RegisterFormRequest $request) {
 
 
         $user = User::create(array_merge($request->only('name','email'),

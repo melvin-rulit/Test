@@ -1,32 +1,36 @@
 <template>
-    <div class="with-block">
+    <div class="m-op">
 
-        <div class="m-op">
-            <h2>Login Page</h2>
 
-            <!-- Блок выводит ошибки -->
+        <h2>Login Page</h2>
 
-            <div class="m-top">
-                <input placeholder="Enter email" type="email" v-model="email"
-                    >
-
+        <!-- Блок выводит ошибки -->
+        <div  v-if="errors">
+            <div v-for="category in errors" :key="category.errors">
+                <div v-for="error in category" :key="error.category">
+                    <span>{{ error }}</span>
+                </div>
             </div>
-            <div class="m-top">
-                <input placeholder="Enter password" type="password" v-model="password"
-                    >
+        </div>
+        <!-- END -->
 
-            </div>
-
-            <div class="m-top">
-
-                <button class="button4" @click="onLogin">Login</button>
-
-            </div>
-
+        <!-- Форма -->
+        <div class="m-top">
+            <input placeholder="Enter email" type="email" v-model="email">
         </div>
 
+        <div class="m-top">
+            <input placeholder="Enter password" type="password" v-model="password">
+        </div>
+        <!-- END -->
+
+        <!-- Кнопка отправки формы -->
+        <div class="m-top">
+            <button class="button4" @click="onLogin">Login</button>
+        </div>
 
     </div>
+
 </template>
 <script>
     export default {
@@ -34,6 +38,7 @@
             return {
                 email: '',
                 password: '',
+                errors: {}
             };
         },
 
@@ -45,18 +50,14 @@
                 };
 
                 axios.post('/api/login/submit', data)
-                    .then(({
-                        data
-                    }) => {
+                    .then(({data }) => {
                         auth.login(data.token, data.user);
 
                         this.$router.push('/dashboard');
                     })
-                    .catch(({
-                        response
-                    }) => {
-                        alert(response.data.message);
-                    });
+                    .catch(error => {
+                    this.errors = error.response.data.errors;
+                });
             }
         }
     }
@@ -110,12 +111,6 @@
             color: #fff;
             text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #ffd, 0 0 8px #fff;
         }
-    }
-
-
-    /* блок ошибок */
-    span {
-        color: red;
     }
 
 </style>

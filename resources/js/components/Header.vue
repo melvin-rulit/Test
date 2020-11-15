@@ -14,13 +14,15 @@
 
 
     </div>
+ 
 
 </template>
 
 
 <script>
+// import Auth from "./Layout";
     export default {
-      
+
 
         data() {
             return {
@@ -37,33 +39,32 @@
                         href: "/register"
                     },
                     {
-                        title: "App",
-                        href: "/App"
-                    },
-                    {
                         title: "Profile",
-                        href: "/profile"
+                        href: "/dashboard"
                     }
 
-                ]
+                ],
+                
             }
-         },
+        },
           methods: {
-            loGout() {
-
-                axios.get("/api/logout/submit").then(response => {
-                    if (response.data.success) {
-                        Auth.logout();
-                        this.$router.push("/");
-                    }
-                });
-            }
+        loGout() {
+            
+            axios.get("/api/logout/submit").then(response => {
+                if (response.data.success) {
+                   auth.logout();
+                    this.$router.push("/");
+                }
+            });
         }
+    }
+
+        
     }
 
 </script>
 
-<style scoped>
+<style>
     /* Header*/
     .top {
         background-color: #333;

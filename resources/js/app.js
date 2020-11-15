@@ -18,7 +18,6 @@ Vue.component('home', require('./components/Home.vue').default);
 Vue.component('reg', require('./components/Register.vue').default);
 Vue.component('top', require('./components/Login.vue').default);
 Vue.component('v-header', require('./components/Header.vue').default);
-Vue.component('v-app', require('./components/App.vue').default);
 
 import Auth from './auth.js';
 
