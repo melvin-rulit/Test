@@ -53,10 +53,12 @@
                     .then(({data }) => {
                         auth.login(data.token, data.user);
 
-                        this.$router.push('/dashboard');
+                        this.$router.push('/profile');
                     })
                     .catch(error => {
                     this.errors = error.response.data.errors;
+                    
+                    
                 });
             }
         }

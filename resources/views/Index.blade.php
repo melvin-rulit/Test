@@ -9,16 +9,16 @@
 </head>
 
 <body>
-    <div id="app">
+    
+ 
+  
+<div id="app">
         <v-header></v-header>
         <router-view></router-view>
-    </div>
-    </div>
 
+  
 
-    </div>
-
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script type="application/javascript" src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

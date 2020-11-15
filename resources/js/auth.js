@@ -5,6 +5,11 @@ window.auth = auth;
 
 class Auth {
     constructor() {
+
+        this.token = null;
+        this.user = null;
+        
+
         this.token = window.localStorage.getItem('token');
 
         let userData = window.localStorage.getItem('user');
@@ -24,7 +29,7 @@ class Auth {
         this.token = token;
         this.user = user;
 
-        window.
+
 
         Event.$emit('userLoggedIn');
 
@@ -33,7 +38,7 @@ class Auth {
     logout() {
         window.localStorage.removeItem("user");
         window.localStorage.removeItem("token");
-       
+
     }
 
     check() {

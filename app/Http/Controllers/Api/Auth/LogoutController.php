@@ -9,9 +9,9 @@ use Illuminate\Support\Fasades\Auth;
 
 class LogoutController extends Controller
 {
-    //   public function __construct() {
-    //     $this->middleware('auth:api');
-    // }
+      public function __construct() {
+        $this->middleware('auth:api');
+    }
 
     public function suBmit(Request $request)
     {
@@ -21,7 +21,11 @@ class LogoutController extends Controller
 
     //     $token = $request->user()->token();
     // $token->revoke();
-    $response = ['success' => true];
+    
+  
+    // return view('test', ['data' => $data]);
+    
+    $response = ['success' => true, 'data' => $data];
     return response($response, 200);
 
 

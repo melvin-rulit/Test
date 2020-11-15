@@ -10,15 +10,27 @@ import Vue from 'vue';
 Vue.use(vueRouter);
 
 
-const routes = [
-    { path: "/", component: Home },
-    { path: "/register", component: Register },
-    { path: "/login", component: Login },
-    { path: "/dashboard", component: Profile }
+
+const routes = [{
+        path: "/",
+        component: Home
+    },
+    {
+        path: "/register",
+        component: Register
+    },
+    {
+        path: "/login",
+        component: Login
+    },
+    {
+        path: '/profile',
+        component: Profile
+
+    }
 ];
 
 export default new vueRouter({
     mode: "history",
     routes
-  });
-
+});

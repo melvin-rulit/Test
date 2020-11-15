@@ -40,21 +40,23 @@
                     },
                     {
                         title: "Profile",
-                        href: "/dashboard"
+                        href: "/profile"
                     }
 
                 ],
                 
             }
+           
         },
           methods: {
         loGout() {
             
-            axios.get("/api/logout/submit").then(response => {
-                if (response.data.success) {
-                   auth.logout();
-                    this.$router.push("/");
-                }
+            axios.get("/logout/submit").then(response => {
+               auth.logout();
+                 delete axios.defaults.headers.common['Authorization'];
+                    // this.$router.push("/");
+                     window.location.replace("/");
+               
             });
         }
     }
@@ -102,10 +104,12 @@
         color: black;
     }
 
-    /* Add a color to the active/current link
-.topnav li.active {
-    background-color: #4CAF50;
+.danger {
+    padding: 20px;
+    background-color:rgb(240, 168, 168);
     color: white;
-} */
+    margin-bottom: 15px;
+    width: 60%;
+}
 
 </style>

@@ -4,15 +4,17 @@
 require('./bootstrap');
 window.Vue = require('vue');
 
-import { BootstrapVue, IconsPlugin} from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 import router from "./router"
 
 
 // Используем плагины 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
+import { BootstrapVue, IconsPlugin} from 'bootstrap-vue'
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.component('home', require('./components/Home.vue').default);
 Vue.component('reg', require('./components/Register.vue').default);
@@ -31,3 +33,5 @@ const app = new Vue({
     el: "#app"
   
   }).$mount('#app')
+
+  

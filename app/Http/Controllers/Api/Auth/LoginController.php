@@ -30,20 +30,18 @@ class LoginController extends Controller {
             else {
                 $response = ["errors" => "Пароль невереный", 'success' => 'false'];
                 return response($response, 422);
-            }
+    
         } 
-        else {
-            $response = ["errors" =>'Пользователя с таким Email не найден', 'success' => 'false'];
-            return response($response, 422);
-        }
+        
 
     }
+    else {
+        $response = ["errors" =>'Пользователя с таким Email не найден', 'success' => 'false'];
+        return response($response, 422);
+    }
 
-    public function loginWiews(Request $request) {
-        return 'Protected route';
+   
     }
 
 
 }
-
-
