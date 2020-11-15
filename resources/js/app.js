@@ -1,3 +1,6 @@
+// todo Файл app.js будет загружать файл resources/js/bootstrap.js, который загружает и настраивает Vue, Axios, jQuery, а также все остальные JavaScript-зависимости. Если вам надо настроить дополнительные JavaScript-зависимости, вы можете сделать это в данном файле.
+
+
 require('./bootstrap');
 window.Vue = require('vue');
 
@@ -17,8 +20,11 @@ Vue.component('top', require('./components/Login.vue').default);
 Vue.component('v-header', require('./components/Header.vue').default);
 Vue.component('v-app', require('./components/App.vue').default);
 
+import Auth from './auth.js';
 
-    
+window.auth = new Auth();
+
+window.Event = new Vue;
     
 
 const app = new Vue({

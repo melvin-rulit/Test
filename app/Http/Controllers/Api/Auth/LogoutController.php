@@ -9,42 +9,29 @@ use Illuminate\Support\Fasades\Auth;
 class LogoutController extends Controller
 {
 
-
-    public function __construct() {
-        $this->middleware('auth:api')->only('logout');
-    }
-
-
     public function loGout(Request $request)
     {
+        
+        // if (Auth::check()) {
+        //     Auth::user()->token()->revoke();
+           
+        //     return response()->json(['success' =>'logout_success'],200); 
+        // }else{
+        //     return response()->json(['error' =>'api.something_went_wrong'], 500);
+        // }
 
 
-
-
-        // Auth::logout();
-        // return response()
-        // ->json([
-        //     'logout' => true
-        // ]);
+        // // Auth::logout();
+        // // return response()
+        // // ->json([
+        // //     'logout' => true
+        // // ]);
 
     //     $token = $request->user()->token();
     // $token->revoke();
     // $response = ['message' => 'You have been successfully logged out!'];
     // return response($response, 200);
 
-    // //     // Auth::logout();
 
-        $user = Auth::guard('api')->user();
-    
-        if ($user) {
-            $user->api_token = null;
-            $user->save();
-        }
-    
-        return response()->json([
-            'success' => true,
-            'message' => 'You have been successfully logged out!'
-        ]);
-        
 }
 }

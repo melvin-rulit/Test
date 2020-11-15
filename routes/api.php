@@ -5,11 +5,15 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    // return $request->user();
-    // Route::get('logout', 'LogoutController@loGout')->name('logout');
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+//     Route::get('/logout', 'meController');
     
-});
+// });
+
+// Route::middleware('auth:api')->group(function () {
+//     Route::get('/logout', 'meController');
+// });
 
 // Route::group(['middleware' => 'auth:api'], function(){
 //     // Users
@@ -23,14 +27,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::group(['namespace' => 'Api'], function () {
     Route::group(['namespace' => 'Auth'], function () {
 
-        Route::get('register', 'RegisterController@registerWiews')->name('register');
-        Route::post('register/submit', 'RegisterController@store')->name('registerSubmit');
-        Route::get('login', 'LoginController@loginWiews')->name('login');
-        Route::post('login/submit', 'LoginController@suBmit')->name('loginSubmit');
+        // Route::get('register', 'RegisterController@registerWiews')->name('register');
+        Route::post('register/submit', 'RegisterController@store');
+        Route::get('login', 'LoginController@loginWiews')->name('home');
+        Route::post('login/submit', 'LoginController@suBmit');
         // Route::post('logout', function (){Auth::logout(); return redirect('/');})->name('logout');
-        // Route::post('logout', 'LogoutController@logout')->middleware('auth:api')->name('logout');
-        Route::post('logout', 'LogoutController@loGout')->name('logout');
-
+   
+        Route::get('/logout', 'meController');
+   
+  
     });
     });
 

@@ -39,6 +39,10 @@ class LoginController extends Controller {
 
     }
 
+    public function loginWiews(Request $request) {
+        return 'Protected route';
+    }
+
 
 }
 

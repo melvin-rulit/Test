@@ -5,23 +5,15 @@
             <h2>Login Page</h2>
 
             <!-- Блок выводит ошибки -->
-            <div class="position " v-if="errors">
-                <div v-for="category in errors" :key="category.errors">
-                    <div v-for="error in category" :key="error.category">
-                        <span>{{ error.category }}</span>
-                    </div>
-                </div>
-            </div>
-            <!-- END -->
 
             <div class="m-top">
-                <input placeholder="Enter email" type="email" v-model="form.email"
-                    :error-messages="checkError('email')">
+                <input placeholder="Enter email" type="email" v-model="email"
+                    >
 
             </div>
             <div class="m-top">
-                <input placeholder="Enter password" type="password" v-model="form.password"
-                    :error-messages="checkError('password')">
+                <input placeholder="Enter password" type="password" v-model="password"
+                    >
 
             </div>
 
@@ -37,54 +29,37 @@
     </div>
 </template>
 <script>
-    import Auth from "../helpers/Auth";
     export default {
         data() {
             return {
-                form: {
-                    email: null,
-                    password: null
-                },
-
-                errors: {},
-
-
+                email: '',
+                password: '',
             };
         },
 
         methods: {
             onLogin() {
-                this.errors = {};
+                let data = {
+                    email: this.email,
+                    password: this.password
+                };
 
-                axios
-                    .post("/api/login/submit", this.form)
-                    .then(response => {
+                axios.post('/api/login/submit', data)
+                    .then(({
+                        data
+                    }) => {
+                        auth.login(data.token, data.user);
 
-
-
-                        if (response.data.success) {
-         
-                          this.$router.push("/");
-                          Auth.login(response.data.user);
-                        }
+                        this.$router.push('/dashboard');
                     })
-                    .catch(error => {
-                        this.errors = error.response.data.errors;
+                    .catch(({
+                        response
+                    }) => {
+                        alert(response.data.message);
                     });
-            },
-
-
-            checkError(field) {
-                return this.errors.hasOwnProperty(field) ? this.errors[field] : [];
-            },
-
-            onKeyup(e) {
-                if (e.code === "Enter") {
-                    this.onLogin();
-                }
             }
         }
-    };
+    }
 
 </script>
 

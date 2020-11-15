@@ -39,7 +39,12 @@
                     {
                         title: "App",
                         href: "/App"
+                    },
+                    {
+                        title: "Profile",
+                        href: "/profile"
                     }
+
                 ]
             }
          },
@@ -48,7 +53,7 @@
 
                 axios.get("/api/logout/submit").then(response => {
                     if (response.data.success) {
-                        // Auth.logout();
+                        Auth.logout();
                         this.$router.push("/");
                     }
                 });

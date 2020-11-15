@@ -2,6 +2,7 @@ import Home from './components/Home.vue';
 import Login from './components/Login.vue';
 import Register from './components/Register.vue';
 import App from './components/App.vue';
+import Profile from './components/Profile.vue';
 
 import vueRouter from 'vue-router';
 import Vue from 'vue';
@@ -14,7 +15,8 @@ const routes = [
     { path: "/", component: Home },
     { path: "/register", component: Register },
     { path: "/login", component: Login },
-    { path: "/App", component: App }
+    { path: "/App", component: App },
+    { path: "/profile", component: Profile }
 ];
 
 export default new vueRouter({
