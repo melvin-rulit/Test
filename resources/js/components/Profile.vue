@@ -47,10 +47,18 @@
 </script>
 
 <style>
+
 .m-to{
        margin-top: 10%;
         margin-left: 15%;
+}
 
+.danger {
+    padding: 20px;
+    background-color:rgb(240, 168, 168);
+    color: white;
+    margin-bottom: 15px;
+    width: 60%;
 }
 
     /* Style the container with a rounded border, grey background and some padding and margin */
