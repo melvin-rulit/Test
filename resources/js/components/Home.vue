@@ -1,5 +1,7 @@
 <template>
+
     <div class="m-t-w">
+    
  <div class="container">
   <img src="/images/v.png" alt="Avatar" style="width:90px">
   <p><span>Vue.js</span></p>
@@ -16,7 +18,9 @@
   <p>Уже с коробки предоставляет уйму мощных возможностей.</p>
   <p>Мощное средство для разработки backEnd.</p>
 </div> 
+
     </div>
+    
 </template>
 
 <style>
