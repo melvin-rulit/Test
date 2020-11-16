@@ -9,8 +9,11 @@
                 <li class="">
                     <p>Ваш идентификатор - {{ user.id }}</p>
                 </li>
-                <li class="">
+                <li class="m-top">
                     <p>Вы зарегестрировались - {{ user.created_at }}</p>
+                </li>
+                <li class="m-top">
+                    <p>Ваш email - {{ user.email }}</p>
                 </li>
             </ul>
         </div>
@@ -18,12 +21,6 @@
         <!-- Блок, который виден если нет Авторизации -->
         <div class="danger" v-else>
             <h4>Вы не вошли в сиситему и поэтому не видите сожержимое этой страницы</h4>
-
-                <!-- Кнопка для перехода на авторизацию
-            <button class="button4" @click="onLogin">
-                <router-link to="/login">Login</router-link>
-            </button> -->
-
         </div>
 
     </div>
