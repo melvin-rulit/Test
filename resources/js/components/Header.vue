@@ -1,20 +1,20 @@
 <template>
 
     <div class="top">
+    
+     <!-- Блок вывода ссылок в шапке-->
         <ul class="topnav">
             <li v-for="link of links" :key="link.title">
                 <router-link class="lot" :to="link.href">{{ link.title }}</router-link>
             </li>
-            
         </ul>
 
+      <!-- Кнопка разлогинивания -->
         <button type="button" @click="loGout" class="btn btn-primary">
             Logout
         </button>
 
-
     </div>
- 
 
 </template>
 
@@ -67,7 +67,7 @@
 </script>
 
 <style>
-    /* Header*/
+    /*   Блок стилизации  шапки*/
     .top {
         background-color: #333;
         overflow: hidden;
@@ -104,12 +104,5 @@
         color: black;
     }
 
-.danger {
-    padding: 20px;
-    background-color:rgb(240, 168, 168);
-    color: white;
-    margin-bottom: 15px;
-    width: 60%;
-}
 
 </style>
