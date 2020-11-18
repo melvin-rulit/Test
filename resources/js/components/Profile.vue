@@ -1,18 +1,18 @@
 <template>
-    <div class="m-to">
+    <div class="m-t-w">
 
-    <!-- Блок, который виден если прошла  Авторизация -->
+        <!-- Блок, который виден если прошла  Авторизация -->
         <div v-if="authenticated && user">
             <h4>Приветствую <span>{{ user.name}}</span></h4>
 
-            <ul class="m-top">
+            <ul class="m-t-w">
                 <li class="">
                     <p>Ваш идентификатор - {{ user.id }}</p>
                 </li>
-                <li class="m-top">
+                <li class="m-t-w">
                     <p>Вы зарегестрировались - {{ user.created_at }}</p>
                 </li>
-                <li class="m-top">
+                <li class="m-t-w">
                     <p>Ваш email - {{ user.email }}</p>
                 </li>
             </ul>
@@ -47,60 +47,13 @@
 </script>
 
 <style>
-
-.m-to{
-       margin-top: 10%;
-        margin-left: 15%;
-}
-
-.danger {
-    padding: 20px;
-    background-color:rgb(240, 168, 168);
-    color: white;
-    margin-bottom: 15px;
-    width: 60%;
-}
-
-    /* Style the container with a rounded border, grey background and some padding and margin */
-    .container {
-        border: 2px solid #ccc;
-        background-color: #eee;
-        border-radius: 5px;
-        padding: 16px;
-        margin: 16px 0;
-    }
-
-    /* Clear floats after containers */
-    .container::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-
-    /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
-    .container img {
-        float: left;
-        margin-right: 20px;
-        border-radius: 50%;
-    }
-
-    /* Increase the font-size of a span element */
-    .container span {
-        font-size: 20px;
-        margin-right: 15px;
-    }
-
-    /* Add media queries for responsiveness. This will center both the text and the image inside the container */
-    @media (max-width: 500px) {
-        .container {
-            text-align: center;
-        }
-
-        .container img {
-            margin: auto;
-            float: none;
-            display: block;
-        }
+    /* Стиль для блока, который виден если нет Авторизации  */
+    .danger {
+        padding: 20px;
+        background-color: rgb(240, 168, 168);
+        color: white;
+        margin-bottom: 15px;
+        width: 60%;
     }
 
 </style>

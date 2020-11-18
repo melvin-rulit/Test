@@ -9,7 +9,7 @@
             </li>
         </ul>
 
-      <!-- Кнопка разлогинивания -->
+      <!-- Кнопка разлогинивания Logout -->
         <button type="button" @click="loGout" class="btn btn-primary">
             Logout
         </button>
@@ -20,7 +20,7 @@
 
 
 <script>
-// import Auth from "./Layout";
+
     export default {
 
 
@@ -67,42 +67,37 @@
 </script>
 
 <style>
-    /*   Блок стилизации  шапки*/
+
+    /*   Блок стилизации  шапки Header.vue*/
     .top {
         background-color: #333;
         overflow: hidden;
         margin-bottom: 10px;
-
-    }
-
-    .top ul {
-        margin-left: 30%;
-
     }
 
 
-    /* Style the links inside the navigation bar */
+    /* Стиль ссылок внутри панели навигации */
     .topnav li {
         float: left;
-
-        /* text-align: center; */
         padding: 16px 18px;
-
         font-size: 17px;
         list-style: none;
     }
 
+  /* Убираем подчеркивание ссылок */
     .topnav a {
-
         text-decoration: none;
-
     }
 
-    /* Change the color of links on hover */
+    /* Изменить цвет ссылок при наведении */
     .topnav li:hover {
         background-color: #ddd;
         color: black;
     }
 
+   /* Центрирование ссылок в шапке */
+     .top ul {
+        margin-left: 30%;
+    }
 
 </style>

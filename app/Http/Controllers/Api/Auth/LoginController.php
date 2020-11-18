@@ -16,8 +16,6 @@ class LoginController extends Controller {
     public function suBmit(LoginFormRequest $request) {
 
 
-    
-
         $user = User::where('email', $request->email)->first();
         if ($user) {
 
@@ -31,16 +29,14 @@ class LoginController extends Controller {
                 $response = ["errors" => "Пароль невереный", 'success' => 'false'];
                 return response($response, 422);
     
-        } 
-        
+        }
 
     }
     else {
         $response = ["errors" =>'Пользователя с таким Email не найден', 'success' => 'false'];
         return response($response, 422);
     }
-
-   
+        
     }
 
 

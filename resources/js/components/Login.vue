@@ -1,11 +1,11 @@
 <template>
-    <div class="m-op">
 
+    <div class="m-t-w">
 
         <h2>Login Page</h2>
 
         <!-- Блок выводит ошибки -->
-        <div  v-if="errors">
+        <div v-if="errors">
             <div v-for="category in errors" :key="category.errors">
                 <div v-for="error in category" :key="error.category">
                     <span>{{ error }}</span>
@@ -50,16 +50,18 @@
                 };
 
                 axios.post('/api/login/submit', data)
-                    .then(({data }) => {
+                    .then(({
+                        data
+                    }) => {
                         auth.login(data.token, data.user);
 
                         this.$router.push('/profile');
                     })
                     .catch(error => {
-                    this.errors = error.response.data.errors;
-                    
-                    
-                });
+                        this.errors = error.response.data.errors;
+
+
+                    });
             }
         }
     }
@@ -67,7 +69,7 @@
 </script>
 
 <style>
-    /* Кнопка */
+    /* стиль для кнопки отправки формы */
     .button4 {
         position: relative;
         display: inline-block;
@@ -84,35 +86,7 @@
         border-radius: 3px;
         background: #2c0b77 linear-gradient(#0f78ff, #0f78ff);
         box-shadow: inset #0f78ff 0 -1px 1px, inset 0 1px 1px #98ff98, #0f78ff 0 0 0 1px, rgba(0, 0, 0, .3) 0 2px 5px;
-        -webkit-animation: pulsate 1.2s linear infinite;
-        animation: pulsate 1.2s linear infinite;
-    }
 
-    .button4:hover {
-        -webkit-animation-play-state: paused;
-        animation-play-state: paused;
-        cursor: pointer;
-    }
-
-    .button4:active {
-        top: 1px;
-        color: #fff;
-        text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #ffd, 0 0 8px #fff;
-        box-shadow: 0 -1px 3px rgba(0, 0, 0, .3), 0 1px 1px #fff, inset 0 1px 2px rgba(0, 0, 0, .8), inset 0 -1px 0 rgba(0, 0, 0, .05);
-    }
-
-    @-webkit-keyframes pulsate {
-        50% {
-            color: #fff;
-            text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #ffd, 0 0 8px #fff;
-        }
-    }
-
-    @keyframes pulsate {
-        50% {
-            color: #fff;
-            text-shadow: 0 -1px rgba(0, 0, 0, .3), 0 0 5px #ffd, 0 0 8px #fff;
-        }
     }
 
 </style>

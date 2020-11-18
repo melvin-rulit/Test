@@ -1,6 +1,6 @@
 <template>
 
-    <div class="m-op">
+    <div class="m-t-w">
 
         <h2>Register Page </h2>
 
@@ -82,19 +82,14 @@
 </script>
 
 <style>
-    /* блок ошибок */
- span {
+    /* Стиль для блока вывода ошибок */
+    span {
         color: red;
     }
+
     /* блок отступа полей ввода и кнопки*/
-.m-top {
+    .m-top {
         margin-top: 20px;
-      
     }
-     /* отступ основного блока */
-.m-op {
-      
-        margin-top: 10%;
-        margin-left: 25%;
-}
+
 </style>
