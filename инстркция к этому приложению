@@ -1,0 +1,19 @@
+Setting up the project
+
+    Clone the repository
+
+    Run composer install
+
+    Configure Laravel directory permissions (documentation)
+
+    Create a database and setup the database configuration inside .env
+
+    Run php artisan key:generate
+
+    Run php artisan migrate
+    
+    Run npm install
+
+
+
+
