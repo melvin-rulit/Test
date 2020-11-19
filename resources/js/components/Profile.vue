@@ -1,18 +1,18 @@
 <template>
     <div class="m-t-w">
 
-        <!-- Блок, который виден если прошла  Авторизация -->
+        <!-- Блок, который виден если прошла Авторизация -->
         <div v-if="authenticated && user">
             <h4>Приветствую <span>{{ user.name}}</span></h4>
 
-            <ul class="m-t-w">
+            <ul class="m-top">
                 <li class="">
                     <p>Ваш идентификатор - {{ user.id }}</p>
                 </li>
-                <li class="m-t-w">
+                <li class="m-top">
                     <p>Вы зарегестрировались - {{ user.created_at }}</p>
                 </li>
-                <li class="m-t-w">
+                <li class="m-top">
                     <p>Ваш email - {{ user.email }}</p>
                 </li>
             </ul>

@@ -16,16 +16,10 @@ class LogoutController extends Controller
     public function suBmit(Request $request)
     {
         
- 
-
-
     //     $token = $request->user()->token();
     // $token->revoke();
     
-  
-    // return view('test', ['data' => $data]);
-    
-    $response = ['success' => true, 'data' => $data];
+    $response = ['success' => true];
     return response($response, 200);
 
 

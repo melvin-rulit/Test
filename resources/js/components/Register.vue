@@ -14,7 +14,7 @@
         </div>
         <!-- END -->
 
-        <!-- Форма -->
+        <!-- Форма регистрации-->
         <div class="m-top">
             <input placeholder="Enter name" label="Name" v-model="form.name">
         </div>
