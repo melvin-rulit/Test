@@ -1,6 +1,3 @@
-// todo Файл app.js будет загружать файл resources/js/bootstrap.js, который загружает и настраивает Vue, Axios, jQuery, а также все остальные JavaScript-зависимости. Если вам надо настроить дополнительные JavaScript-зависимости, вы можете сделать это в данном файле.
-
-
 require('./bootstrap');
 window.Vue = require('vue');
 
@@ -32,6 +29,6 @@ const app = new Vue({
     router,
     el: "#app"
   
-  }).$mount('#app')
+  })
 
   
