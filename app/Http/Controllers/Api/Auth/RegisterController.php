@@ -24,15 +24,11 @@ class RegisterController extends Controller {
 
     public function suBmit(RegisterFormRequest $request) {
 
-
-        $user = User::create(array_merge($request->only('name','email'),
-                    ['password'=> bcrypt($request->password)],
-                ));
-
-        $tol = (array_merge($request->only('name', 'email'),
-                ['password'=> bcrypt($request->password)],
-            ));
-
+        User::create([
+            'name' => request('name'),
+            'email' => request('email'),
+            'password' => bcrypt(request('password'))
+        ]);
 
             return response()->json([
                 'success' => true,
