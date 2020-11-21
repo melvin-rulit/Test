@@ -54,7 +54,6 @@
             axios.get("/logout/submit").then(response => {
                auth.logout();
                  delete axios.defaults.headers.common['Authorization'];
-                    // this.$router.push("/");
                      window.location.replace("/");
                
             });
