@@ -13,7 +13,10 @@
                     <p>Вы зарегестрировались - {{ user.created_at }}</p>
                 </li>
                 <li class="m-top">
-                    <p>Ваш email - {{ user.email }}</p>
+                    <p>Ваш email - {{ user.email }}</p> 
+                </li>
+                <li class="m-top">
+                    <p>Ваш тел.  {{ user.tel }}</p>
                 </li>
             </ul>
         </div>
