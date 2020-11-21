@@ -51,6 +51,7 @@
         data() {
             return {
                 form: {
+                    tel: null,
                     name: null,
                     email: null,
                     password: null,
