@@ -1,24 +1,22 @@
-Setting up the project
+                              Как запустить этот проект
 
-    Clone the repository (git clone https://github.com/melvin-rulit/Test)
+    Клонировать репозиторий (git clone https://github.com/melvin-rulit/Test)
 
-    Run composer install
-
-    Configure Laravel directory permissions (documentation)
-
-    переименуйте .env.example в .env и .env его учетными данными вашей базы данных
-
-    Create a database and setup the database configuration inside .env (DB_DATABASE=melvin)
+Выполнить composer install
 
     Run php artisan key:generate
 
-    Run php artisan migrate
+    Переименуйте файл .env.example в .env (в корне проекта)
+
+    Создаем БД установив значение в .env (DB_DATABASE=melvin)
+
+Запускаем минрацию php artisan migrate
     
     Run npm install
 
     Run npm run watch
 
-    Run php artisan serve
+Запустить сервер php artisan serve
 
 
 

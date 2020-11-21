@@ -1,5 +1,5 @@
 <template>
- <div class="m-t-w">
+    <div class="m-t-w">
 
         <h2>Register Page </h2>
 
@@ -21,9 +21,9 @@
         <div class="m-top">
             <input placeholder="Enter email" label="email" v-model="form.email">
         </div>
-        
+
         <div class="m-top">
-            <input type="tel" v-mask="'+(#)-##-########'" placeholder="tel" label="tel" v-model="form.tel">
+            <input type="tel" v-mask="'+(#)-##-###-#####'" placeholder="tel" label="tel" v-model="form.tel">
         </div>
 
         <div class="m-top">
@@ -47,7 +47,9 @@
 </template>
 
 <script>
+
     export default {
+
         data() {
             return {
                 form: {
