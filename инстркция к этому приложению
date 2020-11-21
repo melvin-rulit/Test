@@ -1,12 +1,12 @@
 Setting up the project
 
-    Clone the repository
+    Clone the repository (git clone https://github.com/melvin-rulit/Test)
 
     Run composer install
 
     Configure Laravel directory permissions (documentation)
 
-    Create a database and setup the database configuration inside .env
+    Create a database and setup the database configuration inside .env (DB_DATABASE=melvin)
 
     Run php artisan key:generate
 
