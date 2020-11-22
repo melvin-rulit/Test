@@ -1,22 +1,22 @@
                               Как запустить этот проект
 
-    Клонировать репозиторий (git clone https://github.com/melvin-rulit/Test) в пустую папку
+    Клонируй репозиторий (git clone https://github.com/melvin-rulit/Test) в пустую папку
 
-Выполнить composer install
+Выполни composer install перейдя в папку проекта
 
-    Переименуйте файл .env.example в .env (в корне проекта)
+    Переименуй файл .env.example в .env (в корне проекта)
 
-    Имя БД - установи  в .env (DB_DATABASE = melvin)
+   Присвоить имя БД - в .env (DB_DATABASE = melvin)
 
     Run php artisan key:generate
 
-Запускаем минрацию php artisan migrate
+Запусти минрацию php artisan migrate
     
     Run npm install
 
     Run npm run watch
 
-Запустить сервер php artisan serve
+Запусти сервер php artisan serve
 
 
 
