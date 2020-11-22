@@ -3,28 +3,28 @@
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+// use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable;
+    // use SoftDeletes, HasApiTokens, Notifiable;
+    use  HasApiTokens, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+    // public $table = 'users';
+
     protected $fillable = [
+      
         'name',
         'email',
         'password',
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * Атрибуты, которые должны быть скрыты для массивов.
      *
      * @var array
      */
@@ -34,11 +34,14 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast to native types.
+     * Атрибуты, которые следует приводить к собственным типам.
      *
      * @var array
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'created_at' => 'datetime:d.m.Y H:m', 
+        'updated_at' => 'datetime:d.m.Y H:m',
     ];
+
 }
