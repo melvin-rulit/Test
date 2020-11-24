@@ -1,4 +1,13 @@
-/amo/v/:addonId
+
+<!-- Вывод наших скриншотов  -->
+
+| Register page | Profile page |
+| ------------ | ------------- |
+|<img src="https://github.com/melvin-rulit/Test/blob/master/screenshot%20project/001.png" width="450">|<img src="https://github.com/melvin-rulit/Test/blob/master/screenshot%20project/002.png" width="450"> |
+
+<!-- END -->
+
+<!-- Вывод блока заголовка и Блок используемых версий пакетов-->
 
 <h1 align="center">Test</h1>
 
@@ -8,7 +17,9 @@
 
 </h2>
 
-## About My project
+<!-- END -->
+
+ About My project
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
