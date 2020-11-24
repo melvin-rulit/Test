@@ -1,3 +1,5 @@
+/amo/v/:addonId
+
 <h1 align="center">Test</h1>
 
 <h2 align="center">
