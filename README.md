@@ -1,8 +1,7 @@
 <!-- Блок  Вывода заголовка и используемых версий пакетов-->
-<p><img alt="npm" src="https://img.shields.io/npm/v/npm"></p>
+
 
 ![Laravel 8.0](https://img.shields.io/badge/Laravel-8.0-orange)
-![GitHub watchers](https://img.shields.io/github/watchers/melvin-rulit/Test?label=watch&style=social)
 
 <h1 align="center">Test</h1>
 
@@ -30,14 +29,11 @@
     Run php artisan migrate
     Run npm install
 
- ## License
 
-Basically, feel free to use and re-use any way you want.
-
-- - - - -
 
 ### DB table migration:
 
+```
 Schema::create('events', function (Blueprint $table) {
     $table->increments('id');
     $table->string('name');
@@ -51,7 +47,13 @@ Schema::create('events', function (Blueprint $table) {
 });
 ```
 
+## [NPM Package](https://npmjs.com/package/vue2-baremetrics-calendar)
 
+ ## License
+
+Basically, feel free to use and re-use any way you want.
+
+- - - - -
 
 <div align=center>
 
