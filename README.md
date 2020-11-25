@@ -1,13 +1,11 @@
 <!-- Блок  Вывода заголовка и используемых версий пакетов-->
 
+![Laravel 8.0](https://img.shields.io/badge/Laravel-8.0-f4645f.svg)
+![GitHub watchers](https://img.shields.io/github/watchers/melvin-rulit/Test?style=social
+
 <h1 align="center">Test</h1>
 
-<h2 align="center">
-![Laravel 8.0](https://img.shields.io/badge/Laravel-8.0-f4645f.svg)
-
-</h2>
-
-<!-- Вывод наших скриншотов  -->
+<!-- Вывод скриншотов  -->
 
 
 | Register page | Profile page |
