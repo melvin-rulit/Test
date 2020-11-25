@@ -1,23 +1,23 @@
+<!-- Блок  Вывода заголовка и используемых версий пакетов-->
+
+<h1 align="center">Test</h1>
+
+<h2 align="center">
+![Laravel 8.0](https://img.shields.io/badge/Laravel-8.0-f4645f.svg)
+
+</h2>
 
 <!-- Вывод наших скриншотов  -->
+
 
 | Register page | Profile page |
 | ------------ | ------------- |
 |<img src="https://github.com/melvin-rulit/Test/blob/master/screenshot%20project/001.png" width="450">|<img src="https://github.com/melvin-rulit/Test/blob/master/screenshot%20project/002.png" width="450"> |
 
-<!-- END -->
 
-<!-- Вывод блока заголовка и Блок используемых версий пакетов-->
 
-<h1 align="center">Test</h1>
 
-<h2 align="center">
 
-[![Mentioned in Awesome Vue.js](https://awesome.re/mentioned-badge.svg)](https://github.com/vuejs/awesome-vue)
-
-</h2>
-
-<!-- END -->
 
  About My project
 
@@ -43,18 +43,24 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
+### Development Setup
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+```bash
+# install deps
+npm install
+
+# build dist files
+npm run build
+
+# serve examples at localhost:8080
+npm run dev
+
+# lint & run all tests
+npm test
+
+# serve docs at localhost:8080
+npm run docs
+```
 
 ## Contributing
 
@@ -71,3 +77,9 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+<div align=center>
+
+Made with :heart: by [melvin-rulit](https://github.com/melvin-rulit).
+
+</div>
