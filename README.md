@@ -1,4 +1,3 @@
-<!-- Блок  Вывода заголовка и используемых версий пакетов-->
 
 
 ![Laravel 8.0](https://img.shields.io/badge/Laravel-8.0-orange)
@@ -19,18 +18,12 @@
     Run npm install
 
 
-<!-- Вывод скриншотов  -->
+### Screenshots
 
 
 | Register page | Profile page |
 | ------------ | ------------- |
 |<img src="https://github.com/melvin-rulit/Test/blob/master/screenshot%20project/001.png" width="450">|<img src="https://github.com/melvin-rulit/Test/blob/master/screenshot%20project/002.png" width="450"> |
-
-
-
-
-
-
 
 
 
