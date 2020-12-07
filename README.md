@@ -3,7 +3,21 @@
 
 ![Laravel 8.0](https://img.shields.io/badge/Laravel-8.0-orange)
 
-<h1 align="center">Test</h1>
+
+<h1 align="center">My Test Project</h1>
+
+## Setting up the project
+
+
+
+    Clone the repository
+    Run composer install
+    Configure Laravel directory permissions (documentation)
+    Create a database and setup the database configuration inside .env
+    Run php artisan key:generate
+    Run php artisan migrate
+    Run npm install
+
 
 <!-- Вывод скриншотов  -->
 
@@ -17,17 +31,6 @@
 
 
 
-## Setting up the project
-
-
-
-    Clone the repository
-    Run composer install
-    Configure Laravel directory permissions (documentation)
-    Create a database and setup the database configuration inside .env
-    Run php artisan key:generate
-    Run php artisan migrate
-    Run npm install
 
 
 
@@ -47,7 +50,6 @@ Schema::create('events', function (Blueprint $table) {
 });
 ```
 
-## [NPM Package](https://npmjs.com/package/vue2-baremetrics-calendar)
 
  ## License
 
