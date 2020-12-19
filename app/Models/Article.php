@@ -11,6 +11,6 @@ class Article extends Model
 
 // поля доступные для записи в БД
     protected $fillable = ['title', 'text'];
-
+fuck what i do
 
 }
