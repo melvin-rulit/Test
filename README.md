@@ -54,8 +54,7 @@ GitHub, Bitbucket и пришлите ссылку на репозиторий.
 
 ## Setting up the project
 
-
-
+```bash
     Clone the repository
     Run composer install
     Configure Laravel directory permissions (documentation)
@@ -63,7 +62,7 @@ GitHub, Bitbucket и пришлите ссылку на репозиторий.
     Run php artisan key:generate
     Run php artisan migrate
     Run npm install
-
+```
 
 ### Screenshots
 
